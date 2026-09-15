@@ -70,6 +70,11 @@
 }
 
 @layer components {
+
+  .display-text {
+    @apply font-display text-6xl;
+  }
+
   .body-text {
     @apply font-sans text-base;
   }
