@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@import "@fontsource/fraunces/300.css";
+@import "@fontsource/fraunces/300-italic.css";
+
+@import "@fontsource/outfit/300.css";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+
+@import "@fontsource/dm-mono/400.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-dm-mono);
+}
+
+
+:root {
+  --background: #0C0C0A;
+  --foreground: #F0EDE6;
+  --card: #141412;
+  --card-foreground: #F0EDE6;
+  --primary: #C8A882;
+  --primary-foreground: #0C0C0A;
+  --secondary: #1E1E1B;
+  --secondary-foreground: #D4CFC7;
+  --muted: #1A1A17;
+  --muted-foreground: #7A7A6F;
+  --accent: #C8A882;
+  --accent-foreground: #0C0C0A;
+  --border: #2A2A24;
+  --ring: #C8A882;
+  --radius: 2px;
+
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-outfit: 'Outfit', system-ui, sans-serif;
+  --font-dm-mono: 'DM Mono', 'Courier New', monospace;
+}
+
+@layer base {
+  h1 {
+    @apply font-display text-5xl;
+  }
+
+  h2 {
+    @apply font-display text-3xl;
+  }
+
+  h3 {
+    @apply font-display text-xl;
+  }
+}
+
+@layer components {
+  .body-text {
+    @apply font-sans text-base;
+  }
+
+  .small-text {
+    @apply font-sans text-sm;
+  }
+
+  .mono-text {
+    @apply font-mono text-xs;
+  }
+}
